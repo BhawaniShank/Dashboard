@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+     <style>
+        *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f8f8f8;
+}
+#sideblock{
+    width: 30%;
+    background-color: #ffffff;
+    height: 100vh;
+    position: absolute;
+    font-size: 62.5%;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3ms ease-out;
+    
+}
+hr{
+    width: 280px;
+    
+}
+.collapsed {
+            width: 0;
+            overflow: hidden;
+        }
+
+
+
+.pi{
+    margin-right: 1.0667rem;
+  width: 1.8667rem;
+  height: 2.3333rem;
+  position: relative;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+
+#block1{
+    position: absolute;
+    left: 30px;
+}
+#block1 a{
+    text-decoration: none;
+  font-size: 1.0rem;
+  font-weight: 600;
+  line-height: 1.9179999488;
+  letter-spacing: 0.028rem;
+  color: #c4c4c4;
+  font-family: Work Sans, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+#block2{
+    position: relative;
+    top: 550px;
+    left: 30px;
+    height: 40vh;
+}
+#block2 a{
+    text-decoration: none;
+    text-decoration: none;
+    font-size: 1.0rem;
+    font-weight: 600;
+    line-height: 1.9179999488;
+    letter-spacing: 0.028rem;
+    color: #c4c4c4;
+    font-family: Work Sans, 'Source Sans Pro';
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.orange{
+    color: #f9782f;
+}
+
+
+nav {
+            display: flex;
+            justify-content:flex-end;
+            align-items: center;
+            height: 70px;
+            padding: 10px;
+            background-color: #ffffff;
+            
+        }
+
+        nav img {
+            
+    margin-left: 20px;
+    width: 7.6114rem;
+    height: 2.7rem;
+    position: absolute;
+    top: 1.0rem;
+    left: 6.2rem;
+    object-fit: contain;
+    vertical-align: top;
+    cursor: pointer;
+    z-index: 100;
+        }
+
+
+
+        #navtex{
+            position: absolute;
+            right: 50px;
+
+        }
+
+
+
+
+        @media (min-width: 481px) and (max-width: 958px){ 
+            #sideblock{
+    width: 30%;
+    background-color: #ffffff;
+    height: 100vh;
+    position: absolute;
+    font-size: 62.5%;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3ms ease-out;
+     
+}
+
+hr{
+    width: 170px;
+}
+
+nav img {
+            
+            margin-left: 20px;
+            width: 7.6114rem;
+            height: 2.7rem;
+            position: absolute;
+            top: 1.0rem;
+            left: 3.2rem;
+            object-fit: contain;
+            vertical-align: top;
+         
+            z-index: 100;
+                }
+
+                #rightblock{
+            position: absolute;
+            left: 30%;
+            width: 70%;
+        
+    height: 100vh;
+    z-index: -2;
+    font-size: 62.5%;
+    display: flex;
+    flex-wrap: wrap;
+    transition: 0.3ms ease-out;
+        }
+
+        }
+        @media (max-width: 650px) { 
+            #sideblock{
+    width: 14.1rem;
+    background-color: #ffffff;
+    height: 100vh;
+    position: absolute;
+    font-size: 62.5%;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3ms ease-out;
+    display: none;   
+}
+
+nav img {
+            
+            margin-left: 20px;
+            width: 7.6114rem;
+            height: 2.7rem;
+            position: absolute;
+            top: 1.0rem;
+            left: 3.2rem;
+            object-fit: contain;
+            vertical-align: top;
+         
+            z-index: 100;
+                }
+
+hr{
+    width: 170px;
+}
+
+#rightblock{
+            position: absolute;
+            left: 0%;
+            width: 100vw;
+        
+        
+    height: 100vh;
+    z-index: -2;
+    font-size: 62.5%;
+    display: flex;
+    flex-wrap: wrap;
+    transition: 0.3ms ease-out;
+        }
+        }
+    
+
+        #freetril{
+            position: relative;
+            top: 5px;
+            left: 38px;
+            font-weight: 600;
+            letter-spacing: 0.04rem;
+        }
+        #daysleft{
+
+            position: relative;
+            top: 5px;
+            left: 40px;
+            font-size: 0.71rem;
+            
+            font-weight: 600;
+            letter-spacing: 0.04rem;
+        }
+        #trailextend{
+            position: relative;
+            top: 5px;
+            left: 38px;
+            font-size: 0.71rem;
+            color: #f9782f;
+            font-weight: 600;
+            letter-spacing: 0.04rem;
+        }
+
+        #rightblock{
+            position: absolute;
+            left: 30%;
+            width: 70%;
+            padding: 50px;
+        
+    height: 100vh;
+    z-index: -2;
+    font-size: 62.5%;
+    display: flex;
+    flex-wrap: wrap;
+    transition: 0.3ms ease-out;
+        }
+#rightblock h1{
+    font-weight: 700;
+}
+#createcard{
+    position: absolute;
+    top: 140px;
+}
+
+.container{
+    position: absolute;
+    top: 120px;
+    left: -10px;
+}
+
+   </style>
+
+</head>
+<body>
+    
+<header>
+    <nav>
+        <img src="./group-5.png" alt="" id="logo1">
+
+
+        <div id="navtex"><p>
+           <span id="freetril">Free Trial | </span>   <span id="daysleft" > 2days left </span> <br>
+           <span id="trailextend"> Extend free trail</span>
+        </p></div>
+
+     
+    </nav>
+</header>
+
+<main>
+
+<div id="sideblock">
+    
+   
+   
+
+<div id="block1">
+    <hr>
+   <p> <a href="#"><img src="./stacking.png" alt=""  class="pi" > <span class="orange">My Projects</span></a> </p>
+   <p> <a href="#"><img src="./group-4.png" alt=""  class="pi">Sample Projects</a> </p>
+   <hr>
+    <p><a href="#"><img src="./icfluentappsregularicon-1.png" alt="" class="pi">Apps</a></p>
+    <p><a href="#"><img src="./player.png" alt="" class="pi">Intro to Necleo</a></p>
+</div>
+
+<div id="block2">
+    <p><a href="#"><img src="./question.png" alt="" class="pi">Help & Support</a></p>
+    <p><a href="#"><img src="./feedbackicicon-1-1.png " class="pi"alt="">feedback</a></p>
+    <p><a href="#" class="black"><img src="./collapse.png" alt="" class="pi">Collapse</a></p>
+</div>
+</div>
+
+<div id="rightblock">
+<h1>My Projects</h1>
+
+    <div class="container ">
+        <!-- Input group for adding new chapters -->
+        <div class="input-group ">
+            <input type="text" class="form-control" placeholder="Chapter Name" 
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button id="add_btn" class="btn btn-outline-success" type="button" id="button-addon2">Create</button>
+        </div>
+ <!-- List of chapters -->
+ <ul id="parentList" class="list-group">
+    <!-- Sample chapter -->
+    <li class="list-group-item d-flex justify-content-between">
+        <h3 class="flex-grow-1"> Chapter 1 </h3>
+        <button class="btn btn-warning mx-5" onclick="editChapter(this)">Edit</button> 
+        <button class="btn btn-danger" onclick="removeChapter(this)">Remove</button> 
+    </li>
+</ul>
+
+</div>
+</div>
+</main>
+
+
+
+<script>
+    // Get reference to the collapse button
+    const collapseBtn = document.querySelector('.black');
+    const showBtn = document.querySelector('#logo1');
+
+    // Add click event listener to the collapse button
+    collapseBtn.addEventListener('click', function() {
+        // Toggle the display of the sideblock
+        const sideblock = document.getElementById('sideblock');
+        if (sideblock.style.display === 'none' || sideblock.style.display === '') {
+            sideblock.style.display = 'block';
+        } else {
+            sideblock.style.display = 'none';
+        }
+    });
+
+    showBtn.addEventListener('click',function(){
+        
+            sideblock.style.display = 'block';
+        
+    })
+
+
+
+
+    const apiUrl = "https://picsum.photos/v2/list?page=1&limit=6";
+
+// api feaching and error handling
+fetch(apiUrl)
+  .then(response => {
+    // Check if the response is successful
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json(); // Parse the JSON data
+  })
+  .then(data => {
+    // Handle the data here
+    console.log(data); // This will log the array of image objects
+  })
+  .catch(error => {
+    console.error("Fetch error:", error);
+  })
+  .then(data => {
+  // Extract image URLs from the data
+  const imageUrls = data.map(img => img.download_url);
+  
+  // Now, imageUrls is an array containing URLs of the images
+  console.log(imageUrls);
+
+  // You can then use these URLs to display the images on your webpage, 
+  // perhaps by setting them as the `src` attribute of <img> elements.
+})
+
+
+
+
+// Add chapter button event listener
+addBtn = document.getElementById('add_btn');
+        addBtn.addEventListener('click', addChapter);
+        
+        // Get the parent list
+        let parentList = document.getElementById('parentList');
+
+        // Function to add a new chapter
+        function addChapter(e) {
+            // Check if there's an empty message and remove it
+            if(parentList.children[0].className == "emptyMsg"){
+                parentList.children[0].remove()
+            }
+            // Retrieve chapter name from input
+            let currentBtn = e.currentTarget;
+            let currentInput = currentBtn.previousElementSibling;
+            let currentChapterName = currentInput.value
+            
+            // Create a new list item
+            let newLi = document.createElement('li'); 
+            newLi.classList.add('list-group-item');
+            newLi.className ="list-group-item d-flex justify-content-between"
+            newLi.innerHTML = `  
+               <h3 class="flex-grow-1"> ${currentChapterName} </h3>
+               <button class="btn btn-warning mx-5" onclick="editChapter(this)">Edit</button> 
+               <button class="btn btn-danger" onclick="removeChapter(this)">Remove</button> `
+
+            // Append the new list item to the parent list
+            parentList.appendChild(newLi);
+        }
+
+        // Function to remove a chapter
+        function removeChapter(currElement){
+            currElement.parentElement.remove()
+            let parentList = document.getElementById('parentList');
+            if(parentList.children.length<=0){
+                let newEmptyMsg = document.createElement("h3")
+                newEmptyMsg.classList.add("emptyMsg")
+                newEmptyMsg.textContent="Nothing is  here. Please add a chapter"
+                parentList.appendChild(newEmptyMsg)
+            }
+        }
+
+        // Function to edit a chapter
+        function editChapter(currElement) {
+            if (currElement.textContent === "Done") {
+                currElement.textContent = "Edit";
+                
+                let currentChapterName = currElement.previousElementSibling.value;
+                let currHeading = document.createElement('h3');
+                currHeading.className = "flex-grow-1";
+                currHeading.textContent = currentChapterName;
+
+                currElement.parentElement.replaceChild(currHeading, currElement.previousElementSibling);
+            } else {
+                currElement.textContent = "Done";
+                
+                let currentChapterName = currElement.previousElementSibling.textContent;
+                let currInput = document.createElement('input');
+                currInput.type = "text";
+                currInput.placeholder = "Chapter Name";
+                currInput.className = "form-control";
+                currInput.value = currentChapterName;
+
+                currElement.parentElement.replaceChild(currInput, currElement.previousElementSibling);
+            }
+        }
+
+</script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
